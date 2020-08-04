@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
+    <script>
+        /*  ==========================================
+      SHOW UPLOADED IMAGE
+  * ========================================== */
+  function readURL(input) {
+      if (input.files && input.files[0]) {
+          var reader = new FileReader();
+  
+          reader.onload = function (e) {
+              $('#imageResult')
+                  .attr('src', e.target.result);
+          };
+          reader.readAsDataURL(input.files[0]);
+      }
+  }
+  
+  $(function () {
+      $('#upload').on('change', function () {
+          readURL(input);
+      });
+  });
+  
+  /*  ==========================================
+      SHOW UPLOADED IMAGE NAME
+  * ========================================== */
+  var input = document.getElementById( 'upload' );
+  var infoArea = document.getElementById( 'upload-label' );
+  
+  input.addEventListener( 'change', showFileName );
+  function showFileName( event ) {
+    var input = event.srcElement;
+    var fileName = input.files[0].name;
+    infoArea.textContent = 'File name: ' + fileName;
+  }
+  
+    </script>
+
+
+    <style>body {
+        background: #222D32;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .login-box {
+        margin-top: 75px;
+        height: auto;
+        background: #1A2226;
+        text-align: center;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
+    
+    .login-key {
+        height: 100px;
+        font-size: 80px;
+        line-height: 100px;
+        background: -webkit-linear-gradient(#27EF9F, #0DB8DE);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    .login-title {
+        margin-top: 15px;
+        text-align: center;
+        font-size: 30px;
+        letter-spacing: 2px;
+        margin-top: 15px;
+        font-weight: bold;
+        color: #ECF0F5;
+    }
+    
+    .login-form {
+        margin-top: 25px;
+        text-align: left;
+    }
+    
+    input[type=text] {
+        background-color: #1A2226;
+        border: none;
+        border-bottom: 2px solid #0DB8DE;
+        border-top: 0px;
+        border-radius: 0px;
+        font-weight: bold;
+        outline: 0;
+        margin-bottom: 20px;
+        padding-left: 0px;
+        color: #ECF0F5;
+    }
+    
+    input[type=password] {
+        background-color: #1A2226;
+        border: none;
+        border-bottom: 2px solid #0DB8DE;
+        border-top: 0px;
+        border-radius: 0px;
+        font-weight: bold;
+        outline: 0;
+        padding-left: 0px;
+        margin-bottom: 20px;
+        color: #ECF0F5;
+    }
+    
+    .form-group {
+        margin-bottom: 40px;
+        outline: 0px;
+    }
+    
+    .form-control:focus {
+        border-color: inherit;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border-bottom: 2px solid #0DB8DE;
+        outline: 0;
+        background-color: #1A2226;
+        color: #ECF0F5;
+    }
+    
+    input:focus {
+        outline: none;
+        box-shadow: 0 0 0;
+    }
+    
+    label {
+        margin-bottom: 0px;
+    }
+    
+    .form-control-label {
+        font-size: 10px;
+        color: #6C6C6C;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    
+    .btn-outline-primary {
+        border-color: #0DB8DE;
+        color: #0DB8DE;
+        border-radius: 0px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+    
+    .btn-outline-primary:hover {
+        background-color: #0DB8DE;
+        right: 0px;
+    }
+    
+    .login-btm {
+        float: left;
+    }
+    
+    .login-button {
+        padding-right: 0px;
+        text-align: right;
+        margin-bottom: 25px;
+    }
+    
+    .login-text {
+        text-align: left;
+        padding-left: 0px;
+        color: #A2A4A4;
+    }
+    
+    .loginbttm {
+        padding: 0px;
+    }</style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-20 col-md-2"></div>
+            <div class="col-lg-20 col-md-20 login-box">
+                <div class="col-lg-12 login-key">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                </div>
+                <div class="col-lg-12 login-title">
+                    Upload your image
+                </div>
+
+               
+     
+            <div class="col-lg-8 mx-auto">
+                <form action="/api/webversion/" enctype="multipart/form-data" method="post">
+                <!-- Upload image input-->
+                <div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm">
+                    <label id="upload"  onchange="readURL(this);" class="form-control border-0">
+                    <label id="upload-label" for="upload" class="font-weight-light text-muted">Choose file</label>
+                    <div class="input-group-append">
+                        <label for="upload" class="btn btn-light m-0 rounded-pill px-4"> <i class="fa fa-cloud-upload mr-2 text-muted"></i><small class="text-uppercase font-weight-bold text-muted">Choose file</small></label>
+                        <input type="submit"  class="btn btn-light m-0 rounded-pill px-4 fa fa-cloud-upload mr-2 text-muted" value="submit">
+                    </div>
+                </div>
+                </form>
+    
+                <!-- Uploaded image area-->
+                <p class="font-italic text-white text-center">The image uploaded will be rendered inside the box below.</p>
+                <div class="image-area mt-4"><img id="imageResult" src="#" alt="" class="img-fluid rounded shadow-sm mx-auto d-block"></div>
+    
+            </div>
+    
+                <div class="col-lg-3 col-md-2"></div>
+            </div>
+        </div>
+
+
+
+
+
+</body>
+</html>
