@@ -1,5 +1,5 @@
 numpy==1.16.4
-Jinja2==2.11.2
+Jinja2==2.11.3
 joblib==0.16.0
 email-validator==1.1.1
 fastapi==0.54.1
