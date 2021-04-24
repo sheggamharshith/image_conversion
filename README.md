@@ -1,4 +1,3 @@
-# image_conversion
-this is the image conversion basic example
+# image_conversion Fast Api
+This is basic project on image conversion  using  fast api pure tempalates which involves using the image as spooled file which can handle larger data sets and images 
 
-This will help you to convert your image to text by using tesseract api calls
